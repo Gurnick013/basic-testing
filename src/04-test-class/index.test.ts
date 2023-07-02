@@ -37,7 +37,7 @@ describe('BankAccount', () => {
   });
 
   test('should withdraw money', () => {
-    const withdrawBalance = initialBalance - deposit;
+    const withdrawBalance = account.getBalance() - deposit;
     expect(account.withdraw(deposit).getBalance()).toBe(withdrawBalance);
   });
 
